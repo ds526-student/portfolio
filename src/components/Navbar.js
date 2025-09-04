@@ -1,17 +1,18 @@
 import React from "react";
 import { navLinks } from '../config';
 import { colors } from "../styles/colours";
+import '../styles/navbar.css';
 
-function Navbar() {
+export default function Navbar() {
     return (
         <nav style={{ ...styles.nav, backgroundColor: colors.navy }}>
-            <a href="/" style={{ color: colors.green, textDecoration: 'none' }}>
+            <a href="/" className="nav-link">
                 Home
             </a>
             <div style={styles.links}>
-                {navLinks.map(link => (
-                    <a key={link.url} href={link.url} style={{ color: colors.green, margin: '0 10px', textDecoration: 'none' }}>
-                        {link.name}
+                {navLinks.map((link, index) => (
+                    <a key={link.url} href={link.url} className="nav-link">
+                        <span style={{ color: colors.green }}>{index + 1}.</span> <span className="nav-link-span">{link.name}</span>
                     </a>
                 ))}
             </div>
@@ -24,9 +25,13 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '20px',
+        paddingLeft: '5%',
+        paddingRight: '2.5%',
+        paddingTop: '3vh',
         color: 'white',
         position: 'fixed',
+        fontFamily: 'monospace',
+        fontSize: 'calc(0.75vw)',
         top: 0,
         left: 0,
         right: 0,
@@ -37,5 +42,3 @@ const styles = {
         alignItems: 'center',
     }
 };
-
-export default Navbar;
