@@ -29,7 +29,7 @@ const styles = {
         paddingRight: '2.5%',
         paddingTop: '3vh',
         color: 'white',
-        position: 'fixed',
+        position: 'sticky',
         fontFamily: 'monospace',
         fontSize: 'calc(0.75vw)',
         top: 0,

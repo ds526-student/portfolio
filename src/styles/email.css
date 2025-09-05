@@ -1,8 +1,7 @@
-.socials-container {
+.email-container {
     position: fixed;
-    left: 40px;
+    right: 40px;
     bottom: 5%;
-    display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 16px 8px;
@@ -10,17 +9,19 @@
     z-index: 1000;
 }
 
-.socials-container a {
+.email-container a {
     color: #a8b2d1; 
-    font-size: 2.5vh;
+    font-size: 1.5vh;
     transition: color 0.2s, transform 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-family: Impact;
+    font-weight: 1000;
 }
 
-.socials-container a:hover {
+.email-container a:hover {
     color: #64ffda;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }

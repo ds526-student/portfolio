@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { colors } from "../styles/colours";
 import '../styles/socials.css';
 import { socialMedia } from '../config';
 
@@ -16,8 +15,8 @@ export default function Socials() {
         <a
           key={idx}
           href={social.url}
-        >
-          {social.icon}
+        > 
+          {socials[idx].icon}
         </a>
       ))}
     </div>
