@@ -1,4 +1,4 @@
-export const email = ['mailto:damionsklenarsclare@gmail.com'];
+export const email = 'mailto:damionsklenarsclare@gmail.com';
 
 export const socialMedia = [
     {

@@ -30,7 +30,7 @@ const styles = {
         fontFamily: 'monospace',
         textAlign: 'left',
         paddingLeft: '25%',
-        paddingTop: '20vh',
+        paddingTop: '25vh',
     },
     name: {
         fontSize: 'calc(4vw)',

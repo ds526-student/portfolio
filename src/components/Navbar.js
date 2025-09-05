@@ -2,12 +2,17 @@ import React from "react";
 import { navLinks } from '../config';
 import { colors } from "../styles/colours";
 import '../styles/navbar.css';
+import logo from '../images/logo.png';
 
 export default function Navbar() {
     return (
         <nav style={{ ...styles.nav, backgroundColor: colors.navy }}>
             <a href="/" className="nav-link">
-                Home
+                <img 
+                    src={logo}
+                    alt="Logo"
+                    style={{ height: '40px', width: '40px' }}
+                />
             </a>
             <div style={styles.links}>
                 {navLinks.map((link, index) => (

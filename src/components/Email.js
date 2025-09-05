@@ -5,14 +5,11 @@ import { email } from '../config';
 export default function Email() {
   return (
     <div className="email-container">
-      {email.map((email, idx) => (
-        <a
-          key={idx}
-          href={email}
-        > 
-            damionsklenarsclare@gmail.com
-        </a>
-      ))}
+      <a
+        href={email}
+      > 
+          damionsklenarsclare@gmail.com
+      </a>
     </div>
   );
 }
