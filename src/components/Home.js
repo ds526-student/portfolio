@@ -1,11 +1,10 @@
 import React from 'react';
-import '../styles/home.css';
 import { colors } from '../styles/colours';
 
 export default function Home() {
     return (
-      <div className="home">
-          <header className="home-header" style={{ backgroundColor: colors.navy }}>
+      <div id="home" className="home">
+          <header className="home-header" style={{ ...styles.minHeight }}>
               <p style={styles.paragraph}>
                   Hi there, my name is
               </p>
@@ -22,6 +21,10 @@ export default function Home() {
 }
 
 const styles = {
+    minHeight: {
+        minHeight: '100vh',
+        backgroundColor: colors.navy,
+    },
     paragraph: {
         fontSize: 'calc(1vw)',
         color: colors.green,

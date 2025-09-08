@@ -3,22 +3,23 @@ import { navLinks } from '../config';
 import { colors } from "../styles/colours";
 import '../styles/navbar.css';
 import logo from '../images/logo.png';
+import { NavHashLink } from "react-router-hash-link";
 
 export default function Navbar() {
     return (
         <nav style={{ ...styles.nav, backgroundColor: colors.navy }}>
-            <a href="/" className="nav-link">
+            <NavHashLink to="#home" className="nav-link">
                 <img 
                     src={logo}
                     alt="Logo"
                     style={{ height: '40px', width: '40px' }}
                 />
-            </a>
+            </NavHashLink>
             <div style={styles.links}>
                 {navLinks.map((link, index) => (
-                    <a key={link.url} href={link.url} className="nav-link">
+                    <NavHashLink key={link.url} to={link.url} className="nav-link">
                         <span style={{ color: colors.green }}>{index + 1}.</span> <span className="nav-link-span">{link.name}</span>
-                    </a>
+                    </NavHashLink>
                 ))}
             </div>
         </nav>
