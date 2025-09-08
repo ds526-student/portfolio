@@ -8,9 +8,10 @@ import Socials from './components/Socials';
 import Email from './components/Email';
 import Home from './components/Home';
 import About from './components/About';
-import Experience from './components/experience';
-import Projects from './components/projects';
-import Contact from './components/contact';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,5 +24,6 @@ root.render(
     <Experience />
     <Projects />
     <Contact />
+    <Footer />
   </BrowserRouter>
 );
