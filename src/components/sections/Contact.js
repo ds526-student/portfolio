@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../styles/colours';
+import { colors } from '../../styles/colours';
 
 export default function contact() {
     return (

@@ -1,15 +1,15 @@
 import React from 'react';
-import { colors } from '../styles/colours';
+import { colors } from '../../styles/colours';
 
-export default function Experience() {
+export default function Projects() {
     return (
-      <div id="experience" className="experience" style={styles.minHeight}>
+      <div id="projects" className="projects" style={styles.minHeight}>
         <div style={{ ...headerStyles.aboutHeader}}>
           <span style={{ ...headerStyles.number }}>
-            2.
+            3.
           </span>
           <span style={{ ...headerStyles.title, paddingLeft: '1%' }}>
-            Experience
+            Projects
           </span>
         </div>
       </div>

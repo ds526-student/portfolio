@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../styles/colours';
+import { colors } from '../../styles/colours';
 
 export default function Home() {
     return (
@@ -13,7 +13,7 @@ export default function Home() {
               </p>
               <p style={styles.description}>
                   I'm a second-year Software Engineering student at the University of Waikato with a focus on developing accessible, human-centered software solutions. 
-                  I enjoy applying technical skills to solve real-world problems and creating digital experiences that are both functional and engaging.
+                  I enjoy applying technical skills to solve real-world problems and creating digital applications that are both functional and engaging.
               </p>
           </header>
       </div>

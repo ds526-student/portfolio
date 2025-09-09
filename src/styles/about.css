@@ -1,0 +1,9 @@
+.img-container img {
+    filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.img-container:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
