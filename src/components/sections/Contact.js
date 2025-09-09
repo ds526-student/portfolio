@@ -4,7 +4,7 @@ import { colors } from '../../styles/colours';
 export default function contact() {
     return (
       <div id="contact" className="contact" style={styles.minHeight}>
-        <div style={{ ...headerStyles.aboutHeader}}>
+        <div style={{ ...headerStyles.Header}}>
           <span style={{ ...headerStyles.number }}>
             4.
           </span>
@@ -46,7 +46,7 @@ const styles = {
 }
 
 const headerStyles = {
-    aboutHeader: {
+    Header: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',

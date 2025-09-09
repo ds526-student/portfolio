@@ -1,0 +1,18 @@
+.content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.tab-list li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.tab-list li:hover {
+    cursor: pointer;
+    color: #64ffda;
+    background-color: #a8b2d1;
+}

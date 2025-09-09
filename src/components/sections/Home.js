@@ -8,9 +8,9 @@ export default function Home() {
               <p style={styles.paragraph}>
                   Hi there, my name is
               </p>
-              <p style={styles.name}>
+              <h1 style={styles.name}>
                   Damion Sklenars-Clare.
-              </p>
+              </h1>
               <p style={styles.description}>
                   I'm a second-year Software Engineering student at the University of Waikato with a focus on developing accessible, human-centered software solutions. 
                   I enjoy applying technical skills to solve real-world problems and creating digital applications that are both functional and engaging.

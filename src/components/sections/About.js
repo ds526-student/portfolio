@@ -5,7 +5,7 @@ import '../../styles/about.css';
 export default function About() {
     return (
       <div id="about" className="about" style={styles.minHeight}>
-        <div style={{ ...headerStyles.aboutHeader}}>
+        <div style={{ ...headerStyles.Header}}>
           <span style={{ ...headerStyles.number }}>
             1.
           </span>
@@ -54,7 +54,7 @@ const styles = {
 }
 
 const headerStyles = {
-    aboutHeader: {
+    Header: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',
