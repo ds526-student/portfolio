@@ -48,3 +48,22 @@ const work_experience = [
         stack: ["Customer Service", "Stock Management", "Display Management"]
     }
 ]
+
+function makeCard(work) {
+    const newCard = document.createElement("div");
+    newCard.className = "card work-container";
+    
+    newCard.innerHTML = `
+        <div class="card-header">
+            <h3>${work.title}</h3>
+        </div>
+    `;
+
+    return newCard;
+}
+
+for (let i = 0; i < work_experience.length; i++) {
+    const work = work_experience[i];
+    const card = makeCard(work);
+    document.getElementById("work-experience").appendChild(card);
+}
