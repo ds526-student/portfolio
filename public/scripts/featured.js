@@ -17,7 +17,7 @@ const featured_projects = [
     {
         img: "/assets/featured/portfolio.png",
         title: "Personal Portfolio",
-        type: "Web Application",
+        type: "Website",
         stage: "In Development",
         version: "0.4.0",
         description:
@@ -127,7 +127,7 @@ function makeCard(project) {
                         ${project.description}
                     </p>
                 </div>
-                <div class="project-stack-section">
+                <div class="stack-section">
                     <h3>STACK</h3>
                     <ul>
                         ${project.stack.map(tech => `<li>${tech}</li>`).join('')}
