@@ -1,0 +1,76 @@
+/* general */
+.work-experience {
+    width: 92.5%;
+    margin: 0 auto;
+}
+
+
+/* card header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left side */
+.card-header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.campaign-title {
+    color: var(text) !important;
+    font-size: 2rem !important;
+    font-weight: 700;
+}
+
+.sub-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: var(--gilded-gold);
+    letter-spacing: 1px;
+}
+
+.location {
+    font-size: 1rem;
+}
+
+.dates {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+
+/* right side */
+.card-header-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header-right .campaign-status {
+    background-color: var(--gilded-gold);
+    color: var(--aged-ink);
+    border: 1px solid var(--aged-ink);
+    padding: 2.5px 10px;
+    border-radius: 15px;
+}
+
+/* content */
+.campaign-description {
+    font-size: 1rem;
+    margin-bottom: 10px !important;
+}
+
+.campaign-achievements {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 10px !important;
+}
+
+.campaign-achievements li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}

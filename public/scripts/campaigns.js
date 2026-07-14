@@ -4,8 +4,9 @@ const work_experience = [
         title: "Software Engineer",
         company: "Farmland Efficiency",
         Location: "Hamilton, NZ",
-        dates: "October 2025 - March 2026",
-        type: "Full-time",
+        dates: "Oct 2025 - Mar 2026",
+        type: "Summer Internship",
+        status: "Campaign Completed",
         description: 
             `Joined an early stage startup as a software engineer building an AI-driven blueberry harvesting system,
             using computer vision to improve harvesting efficiency and displaying real-time data.`,
@@ -22,6 +23,7 @@ const work_experience = [
         Location: "Cambridge, NZ",
         dates: "June - July 2025",
         type: "Internship",
+        status: "Campaign Completed",
         description:
             `Embedded within the team infrastructure, troubleshooting and monitoring live systems
             while contributing to improving internal applications and processes.`,
@@ -36,8 +38,9 @@ const work_experience = [
         title: "Long Life Assistant",
         company: "WoolWorths New Zealand",
         Location: "Hamilton, NZ",
-        dates: "October 2022 - October 2025",
+        dates: "Oct 2022 - Oct 2025",
         type: "Part-time",
+        status: "Campaign Completed",
         description:
             `Worked across checkouts and long-life departments, assisting customers and
             with stock operations and display management.`,
@@ -51,27 +54,34 @@ const work_experience = [
 
 function makeCard(work) {
     const newCard = document.createElement("div");
-    newCard.className = "card work-container";
+    newCard.className = "card campaign-container";
     
     newCard.innerHTML = `
         <div class="card-header">
-            <h3>${work.title}</h3>
-            <div>
-                <h4>${work.company}</h4>
-                <h5>${work.Location}</h5>
+            <div class="card-header-left">
+                <h2 class="campaign-title">${work.title}</h2>
+                <div class="sub-info location">
+                    <p class="campaign-company">${work.company}</p>
+                    &bull;
+                    <p class="campaign-type">${work.type}</p>
+                </div>
+                <div class="sub-info dates">
+                    <p class="campaign-dates">${work.dates}</p>
+                    &bull;
+                    <p class="campaign-location">${work.Location}</p>
+                </div>
+            </div>
+            <div class="card-header-right">
+                <h5 class="campaign-status">${work.status}</h5>
             </div>
         </div>
         <div class="card-body">
-            <div class="card-dates">
-                <h5>${work.dates}</h5>
-                <h5>${work.type}</h5>
-            </div>
-            <p>${work.description}</p>
-            <ul>
+            <p class="campaign-description">${work.description}</p>
+            <ul class="campaign-achievements">
                 ${work.achievements.map(achievement => `
                     <li>
                         <svg 
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                             class="lucide lucide-sparkle-icon lucide-sparkle">
                             <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
