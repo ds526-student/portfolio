@@ -1,14 +1,85 @@
-/* general */
 .work-experience {
-    width: 92.5%;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
+    max-height: 62vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 175, 55, 0.35) transparent;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
+/* scrollbar */
+.work-experience::-webkit-scrollbar {
+    width: 5px;
+}
+
+.work-experience::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.work-experience::-webkit-scrollbar-thumb {
+    background-color: rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+}
+
+.work-experience::-webkit-scrollbar-thumb:hover {
+    background-color: var(--gilded-gold);
+}
+
+@media (max-width: 800px) {
+    .work-experience {
+        max-height: 65vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .work-experience {
+        max-height: 70vh;
+        padding-right: 0.4rem;
+    }
+}
+
+/* cards */
+.campaign-container {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 0 !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.campaign-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--gilded-gold), transparent);
+    opacity: 0.6;
+}
+
+.campaign-container:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 14px rgba(212, 175, 55, 0.1);
+}
 
 /* card header */
 .card-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 0.5px solid var(--bg);
+    padding-bottom: 0.85rem;
+    margin-bottom: 0.85rem;
 }
 
 /* left side */
@@ -17,60 +88,96 @@
     flex-direction: column;
 }
 
-.campaign-title {
-    color: var(text) !important;
-    font-size: 2rem !important;
+.card h2.campaign-title {
+    color: var(--aged-parchment);
+    font-size: 1.6rem;
     font-weight: 700;
+    margin-bottom: 0.35rem;
 }
 
 .sub-info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     color: var(--gilded-gold);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .location {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .dates {
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+    font-size: 0.75rem;
+    margin-bottom: 0;
 }
 
+.dates .campaign-dates,
+.dates .campaign-location {
+    color: var(--text-muted);
+}
 
 /* right side */
 .card-header-right {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 }
 
 .card-header-right .campaign-status {
     background-color: var(--gilded-gold);
     color: var(--aged-ink);
     border: 1px solid var(--aged-ink);
-    padding: 2.5px 10px;
+    padding: 3px 12px;
     border-radius: 15px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 /* content */
 .campaign-description {
-    font-size: 1rem;
-    margin-bottom: 10px !important;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 0.85rem !important;
 }
 
 .campaign-achievements {
     list-style-type: none;
     padding-left: 0;
-    margin-bottom: 10px !important;
+    margin-bottom: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .campaign-achievements li {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: var(--text);
+}
+
+.campaign-achievements li svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--gilded-gold);
+}
+
+@media (max-width: 500px) {
+    .card-header {
+        flex-direction: column;
+    }
+
+    .card h2.campaign-title {
+        font-size: 1.3rem;
+    }
+
+    .card-header-right {
+        align-self: flex-start;
+    }
 }
