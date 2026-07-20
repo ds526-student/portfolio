@@ -15,11 +15,11 @@ const featured_projects = [
         repo: "https://github.com/noimadd/sheetsync"
     },
     {
-        img: "/assets/featured/placeholder.png",
+        img: "/assets/featured/portfolio.png",
         title: "Personal Portfolio",
-        type: "Web Application",
+        type: "Website",
         stage: "In Development",
-        version: "0.2.0",
+        version: "0.4.0",
         description:
            `This portfolio website is a personal project designed to showcase my skills, experience, and projects as a software developer.
             It also serves as a way for me to improve my design and frontend development skills,
@@ -43,7 +43,7 @@ const featured_projects = [
         repo: "https://github.com/noimadd/trialOfRealms"
     },
     {
-        img: "/assets/featured/placeholder.png",
+        img: "/assets/featured/suppsense.png",
         title: "SuppSense",
         type: "Web Application",
         stage: "Completed Prototype",
@@ -56,16 +56,16 @@ const featured_projects = [
         repo: "https://github.com/noimadd/samSuppSense"
     },
     {
-        img: "/assets/featured/placeholder.png",
-        title: "Trial of Realms 2.0",
-        type: "Game",
-        stage: "Planned",
+        img: "/assets/featured/racecar.png",
+        title: "Digital Dashboard",
+        type: "Embedded System",
+        stage: "Planned Prototype",
         version: "0.0.0",
         description:
-           `Trial of Realms 2.0 is a planned remake of the original Trial of Realms game,
-            with a focus on developing a user interface, alongside improving the combat system, skills, and items,
-            while also adding new content. Development of this project is planned to begin after the completion of SheetSync.`,
-        stack: ["Node.js", "EJS", "Express", "Socket.io", "PostgreSQL", "Redis", "Docker"],
+            `The Digital Dashboard is a planned embedded system project designed to provide users with a digital interface for their race car.
+            It will feature a variety of sensors and displays providing real-time information about the car's performance. It will be designed to be 
+            easily integrated into existing race cars, and updates can be done easily through a USB port.`,
+        stack: ["Rust", "ESP32", "CAN Bus", "Node.js", "Express", "EJS", "PostgreSQL"],
         live: '',
         repo: ''
     },
@@ -127,7 +127,7 @@ function makeCard(project) {
                         ${project.description}
                     </p>
                 </div>
-                <div class="project-stack-section">
+                <div class="stack-section">
                     <h3>STACK</h3>
                     <ul>
                         ${project.stack.map(tech => `<li>${tech}</li>`).join('')}

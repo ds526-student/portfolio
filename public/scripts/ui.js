@@ -28,9 +28,16 @@ menuLinks.forEach(link => {
 // show on scroll up or near top
 let prevScrollpos = window.pageYOffset;
 const nav = document.querySelector('.top-nav');
+const isMobileNav = () => window.innerWidth <= 1280;
 
 window.addEventListener('scroll', () => {
     let currentScrollPos = window.pageYOffset;
+
+    if (isMobileNav()) {
+        nav.classList.remove('hidden');
+        prevScrollpos = currentScrollPos;
+        return;
+    }
 
     if (currentScrollPos < 100) {
         nav.classList.remove('hidden');

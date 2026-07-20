@@ -12,94 +12,7 @@
 
 
 
-/* heading */
-.featured-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.featured-header > * {
-    flex: 1;
-}
-
-.featured-title {
-    display: flex;
-    flex-direction: column;
-}
-
-.featured-pretitle {
-    display: flex;
-    flex-direction: row;
-}
-
-.horizontal-line {
-    width: 40px;
-    height: 1px;
-    background-color: var(--gilded-gold);
-    margin: auto 10px;
-}
-
-#pretitle-featured {
-    color: var(--gilded-gold);
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-
-}
-
-.featured-description-container {
-    margin-top: 2rem;
-}
-
-#featured-intro {
-    font-size: 1.1rem;
-    color: var(--text);
-    margin-bottom: 1rem;
-
-}
-
-.featured-description {
-    font-size: 1rem;
-    color: var(--text);
-}
-
-.featured-description:first-child {
-    margin-bottom: 10rem;
-}
-
-@media (max-width: 1024px) {
-    .featured-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .featured-pretitle {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #title-featured {
-        font-size: 3rem;
-    }
-
-    .featured-description-container {
-        text-align: left;
-        margin-top: 1rem;
-    }
-}
-
-
-
-
 /* featured projects */
-.featured-projects {
-    margin-top: 150px;
-}
 
 .project-container { 
     max-width: 700px;
@@ -271,43 +184,6 @@
     line-height: 1.8;
 }
 
-.project-stack-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.project-stack-section ul {
-    column-count: 4;
-    column-gap: 1.25rem;
-    padding-left: 0;
-}
-
-@media (max-width: 800px) {
-    .project-stack-section ul {
-        column-count: 3;
-    }
-}
-
-@media (max-width: 500px) {
-    .project-stack-section ul {
-        column-count: 2;
-    }
-}
-
-.project-stack-section li {
-    font-size: 0.9rem;
-    color: var(--gilded-gold);
-    background-color: var(--bg-dark);
-    padding: 5px 10px;
-    text-align: center;
-    border: 1px solid var(--bg);
-    border-radius: 8px;
-    list-style-type: none;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
 @media (max-width: 800px) {
     .project-overview {
         margin: 0;
@@ -317,11 +193,6 @@
         flex-direction: column;
     }
 
-    
-    .project-stack-section {
-        border-left: none;
-        padding-left: 0;
-    }
 }
 
 @media (max-width: 500px) {
@@ -329,9 +200,6 @@
         font-size: 0.8rem;
     }
 
-    .project-stack-section li {
-        font-size: 0.8rem;
-    }
 }
 
 
@@ -416,7 +284,6 @@
 .featured-projects {
     width: 100%;
     position: relative;
-    margin-top: 150px;
     max-width: 1500px;
     overflow: hidden;
     /* Fade cards out toward edges */
